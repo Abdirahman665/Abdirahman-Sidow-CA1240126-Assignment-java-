@@ -1,0 +1,33 @@
+and that is file main
+
+
+
+
+
+package Hospital;
+
+public class Main {
+        public static void main(String[] args) {
+
+            Outpatient patient1 =
+                    new Outpatient("Ahmed", 50, 30);
+
+            System.out.println("OUTPATIENT");
+            System.out.println("Name: " + patient1.Name);
+            System.out.println("Consult Fee: " + patient1.ConsultFee);
+            System.out.println("Lab Charge: " + patient1.LabCharge);
+            System.out.println("Total Bill: " + patient1.CalculateBill());
+
+            System.out.println();
+
+            Inpatient patient2 =
+                    new Inpatient("abdi", 50, 100, 3);
+
+            System.out.println("INPATIENT");
+            System.out.println("Name: " + patient2.Name);
+            System.out.println("Consult Fee: " + patient2.ConsultFee);
+            System.out.println("Room Charge: " + patient2.RoomCharge);
+            System.out.println("Number Of Days: " + patient2.NumberOfDays);
+            System.out.println("Total Bill: " + patient2.CalculateBill());
+        }
+    }

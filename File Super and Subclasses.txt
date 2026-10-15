@@ -1,0 +1,54 @@
+Asc
+
+Name:Abdirahman Hussein Sidow
+ID:C1240126
+
+
+that is file Super Class(Patient), and subclasses
+
+
+
+
+package Hospital;
+
+public class Patient {
+        String Name;
+        double ConsultFee;
+
+        public Patient(String name, double consultFee) {
+            Name = name;
+            ConsultFee = consultFee;
+        }
+    }
+
+    class Outpatient extends Patient {
+        double LabCharge;
+
+        public Outpatient(String name, double consultFee,
+                          double labCharge) {
+            super(name, consultFee);
+            LabCharge = labCharge;
+        }
+
+        public double CalculateBill() {
+            return LabCharge + ConsultFee;
+        }
+    }
+
+    class Inpatient extends Patient {
+        double RoomCharge;
+        int NumberOfDays;
+
+        public Inpatient(String name, double consultFee,
+                         double roomCharge, int numberOfDays) {
+            super(name, consultFee);
+            RoomCharge = roomCharge;
+            NumberOfDays = numberOfDays;
+        }
+
+        public double CalculateBill() {
+            return (NumberOfDays * RoomCharge) + ConsultFee;
+        }
+    }
+
+
